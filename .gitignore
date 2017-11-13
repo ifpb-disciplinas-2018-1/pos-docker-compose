@@ -17,3 +17,7 @@ nb-configuration.xml
 **/target
 .idea/**
 **/*.iml
+
+**/*.json
+docker-compose.1.yml
+docker-compose.2.yml

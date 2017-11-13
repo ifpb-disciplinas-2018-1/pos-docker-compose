@@ -1,16 +1,37 @@
 version: '2'
 services:
- postgres:
-  build: ./postgres
-  image: ricardojob/banco
-  container_name: banco
-  ports: 
-    - "5433:5432"
- web:
-  build: .
-  image: ricardojob/app
-  container_name: app
-  ports: 
-    - "8082:8080" 
-  links: 
-    - "postgres:host-banco"   
+    postgres:
+        image: ricardojob/banco
+        build: ./postgres
+        container_name: banco
+        ports:
+          - "5433:5432" 
+    web:
+        image: ricardojob/dac-aula
+        build: .
+        container_name: app
+        ports:
+          - "8082:8080"
+        links:
+          - "postgres:host-banco" 
+    # teste:
+    #     image: postgres
+    #     restart: always
+    #     expose :
+    #       - "5432"
+    #     ports:
+    #       - "5434:5432" 
+    #     environment:
+    #       - POSTGRES_USER postgres          
+    #       - POSTGRES_PASSWORD 12345          
+    #       - POSTGRES_DB pos-cliente          
+
+# dacdockercompose_teste_1
+# dacdockercompose_teste_1
+# docker build -t ricardojob/pos-aula .
+# docker run -p 8082:8080 -d --name app --link banco:host-banco -v $(pwd)/web:/usr/local/tomcat/webapps  ricardojob/pos-aula 
+
+
+
+# docker build -t ricardojob/banco ./postgres
+# docker run -p 5433:5432 -d --name banco -v $(pwd)/data:/var/lib/postgresql/data ricardojob/banco
