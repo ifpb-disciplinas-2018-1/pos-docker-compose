@@ -20,4 +20,3 @@ nb-configuration.xml
 
 **/*.json
 docker-compose.1.yml
-docker-compose.2.yml
