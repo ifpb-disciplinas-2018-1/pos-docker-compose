@@ -1,10 +1,11 @@
-#Passos com o `docker-compose`
+# Passos com o `docker-compose`
 
 ## Criar as imagens e Executar os serviços
 
 `docker-compose up -d --build`
 
 *`-d`: configura uma execução em background (_Detached mode_)* 
+
 *`--build`: forçar a criação de novas imagens antes da execução dos containers*  
 
 ## Encerrar os serviços
@@ -14,7 +15,7 @@
 *`---rmi <type>`: remove as imagens, podemos configurar com `all` ou `local`;
 
 
-#Passos sem o `docker-compose`
+# Passos sem o `docker-compose`
 
 ## Listar as imagens
 
