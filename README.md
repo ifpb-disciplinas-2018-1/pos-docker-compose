@@ -12,7 +12,7 @@
 
 `docker-compose down --rmi`
 
-*`---rmi <type>`: remove as imagens, podemos configurar com `all` ou `local`;
+*`---rmi <type>`: remove as imagens, podemos configurar com `all` ou `local`;*
 
 
 # Passos sem o `docker-compose`
