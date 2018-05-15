@@ -3,11 +3,11 @@ services:
     postgres:
         image: ricardojob/banco
         build: ./postgres
-        container_name: banco
-        ports:
-          - "5433:5432" 
+        # container_name: banco
+        # ports:
+        #   - "5433:5432" 
     web:
-        image: ricardojob/dac-aula
+        image: ricardojob/app
         build: .
         container_name: app
         ports:
@@ -22,9 +22,12 @@ services:
     #     ports:
     #       - "5434:5432" 
     #     environment:
-    #       - POSTGRES_USER postgres          
-    #       - POSTGRES_PASSWORD 12345          
-    #       - POSTGRES_DB pos-cliente          
+    #       - POSTGRES_USER=postgres          
+    #       - POSTGRES_PASSWORD=12345          
+    #       - POSTGRES_DB=pos-exemplo          
+    #     volumes:
+    #       - ./postgres/:/docker-entrypoint-initdb.d/
+
 
 # dacdockercompose_teste_1
 # dacdockercompose_teste_1

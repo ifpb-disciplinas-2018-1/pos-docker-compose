@@ -1,7 +1,7 @@
 package br.edu.ifpb.model;
 
 import java.io.Serializable;
-
+//oi
 public class Pessoa implements Serializable {
 
     private int id;

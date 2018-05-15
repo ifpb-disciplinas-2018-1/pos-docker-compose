@@ -12,8 +12,6 @@ public class DbUtil {
             return connection;
         } else {
             try {
-
-                
                 String url = "jdbc:postgresql://host-banco:5432/pos-cliente";
                 String usuario = "postgres";
                 String senha = "12345";
